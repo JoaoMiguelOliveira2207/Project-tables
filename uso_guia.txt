@@ -1,0 +1,58 @@
+Este é o guia de uso deste projeto. 
+
+1 - instale o painel xampp em: 
+
+    https://sourceforge.net/projects/xampp/ 
+
+    2 - no meio dos principais arquivos vai ter uma pasta chamada htdocs, ache a pasta htdocs e mova este projeto pra dentro da pasta.
+
+3 - aperte a tecla windows e digite Xampp, abra o arquivo.
+
+    4 - com o painel de controle ligado, agora você vai ligar o Apache, e o Mysql, clicando no botão "start" na linha de ambos, para tranformar seu computador em um servidor que irá conseguir armazenar seus dados.
+
+5 - no navegador de sua preferência, digite na aba de pesquisa "localhost/phpmyadmin", ou no painel de controle, clique em "Admin" na linha do Mysql
+
+    6 - no site do phpmyadmin, parte superior, estará escrito "SQL", entre nessa aba e digite o seguinte código:
+
+    CREATE DATABASE registros;
+
+    Após isso, clique em "GO" ou "Executar" para fazer o código funcionar
+    este código criará um banco de dados chamado registros. importante que o nome de seu banco de dados seja exatamente igual ao que estarei descrevendo aqui, se não o código não irá funcionar
+
+7 - Clique no banco de dados que acabara de ser criado, clique novamente em SQL, e execute o seguinte código para criarmos uma tabela:
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente VARCHAR(255) NOT NULL,
+    cidade VARCHAR(255) NOT NULL,
+    estado VARCHAR(255) NOT NULL,
+    modelo VARCHAR(255) NOT NULL,
+    nserie VARCHAR(255) NOT NULL,
+    calibragem VARCHAR(255) NOT NULL
+);
+
+Após isso, clique em "GO" ou "Executar" para fazer o código funcionar
+Este código criará uma tabela que usaremos para importar informações vindas do front-end.
+
+    8 - No seu navegador de preferência, digite o seguinte endereço no URL:
+
+    localhost/projeto_tabelas/index.php
+
+    este endereço não irá dar certo apenas no caso de você ter renomeado a pasta ou deletado alguma das aplicações baixadas.
+
+Forma de uso:
+
+1 - em index.php, no localhost (servidor local), registre algumas informações. 
+
+    2 - o botão copiar, te direcionará para uma página na qual os elementos são mostrados de forma sem o Id, e sem o botão editar, para você copiar a tabela e copiar no seu registrador de preferência (excel ou google sheets)
+
+3 - Clique em editar para editar as informações ou excluir o elemento. Você irá reparar que caso registre 3 elementos, e deletar aquele com indice 2, ele sumirá para sempre, pois o Identificador é único para cada elemento.
+
+
+3 - você pode editar tudo no botão escrito "editar", mas e se eu quiser apagar tudo e recomeçar outra tabela ?
+Vá para o SQL na aba da sua tabela "clientes", e digite o seguinte código:
+
+TRUNCATE clientes;
+
+Após isso, clique em "GO" ou "Executar" para fazer o código funcionar.
+Mas ATENÇÃO: Este código reiniciará a tabela, e você não será capaz de recuperar os dados da tabela anterior, e os Id's reiniciarão;
