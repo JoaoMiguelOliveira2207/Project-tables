@@ -55,4 +55,7 @@ Vá para o SQL na aba da sua tabela "clientes", e digite o seguinte código:
 TRUNCATE clientes;
 
 Após isso, clique em "GO" ou "Executar" para fazer o código funcionar.
-Mas ATENÇÃO: Este código reiniciará a tabela, e você não será capaz de recuperar os dados da tabela anterior, e os Id's reiniciarão;
+Mas ATENÇÃO: Este código reiniciará a tabela, e você não será capaz de recuperar os dados da tabela anterior, e os Id's reiniciam.
+
+sinta-se livre para explorar as funcionalidades manuais do phpmyadmin, pois é uma ferramenta de grande utilidade para registro de informação. 
+Aproveite seu novo registrador de informação determinada em tabelas!    
